@@ -1,0 +1,17 @@
+framework: net6.0
+source https://api.nuget.org/v3/index.json
+
+// PRODUCTION STUFF
+
+nuget Be.Vlaanderen.Basisregisters.GrAr.Provenance 17.28.0
+nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 4.3.2
+nuget Be.Vlaanderen.Basisregisters.TicketingService.Abstractions 1.7.11
+
+nuget MediatR 10.0.1
+
+// VBR STUFF
+nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.5
+
+// BUILD STUFF
+nuget SourceLink.Embed.AllSourceFiles 2.8.3 copy_local: true
+nuget SourceLink.Copy.PdbFiles 2.8.3 copy_local: true
