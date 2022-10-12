@@ -17,14 +17,19 @@ let product = "Basisregisters Vlaanderen"
 let copyright = "Copyright (c) Vlaamse overheid"
 let company = "Vlaamse overheid"
 
+let dockerRepository = "basisregisters-sqs"
 let assemblyVersionNumber = (sprintf "2.%s")
 let nugetVersionNumber = (sprintf "%s")
 
 let buildSolution = buildSolution assemblyVersionNumber
 let buildSource = build assemblyVersionNumber
+let buildTest = buildTest assemblyVersionNumber
 let setVersions = (setSolutionVersions assemblyVersionNumber product copyright company)
+let test = testSolution
 let publishSource = publish assemblyVersionNumber
 let pack = pack nugetVersionNumber
+let containerize = containerize dockerRepository
+let push = push dockerRepository
 
 supportedRuntimeIdentifiers <- [ "msil"; "linux-x64" ]
 
@@ -36,15 +41,48 @@ Target.create "Build_Solution" (fun _ ->
   buildSolution "basisregisters-sqs"
 )
 
+Target.create "Test_Solution" (fun _ -> test "basisregisters-sqs")
+
+Target.create "Publish_Solution" (fun _ ->
+  [ ] |> List.iter publishSource
+ )
+
+Target.create "Pack_Solution" (fun _ ->
+  [ ] |> List.iter pack)
+
 // --------------------------------------------------------------------------------
 
 Target.create "Build" ignore
+Target.create "Test" ignore
+Target.create "Publish" ignore
+Target.create "Pack" ignore
+Target.create "Containerize" ignore
+Target.create "Push" ignore
 
 "NpmInstall"
   ==> "DotNetCli"
   ==> "Clean"
   ==> "Restore_Solution"
   ==> "Build_Solution"
+  ==> "Build"
+
+"Build"
+  ==> "Test_Solution"
+  ==> "Test"
+
+"Test"
+  ==> "Publish_Solution"
+  ==> "Publish"
+
+"Publish"
+  ==> "Pack_Solution"
+  ==> "Pack"
+
+"Pack"
+// Possibly add more projects to containerize here
+
+"Containerize"
+// Possibly add more projects to push here
 
 // By default we build & test
-Target.runOrDefault "Build_Solution"
+Target.runOrDefault "Test"
