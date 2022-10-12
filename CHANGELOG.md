@@ -1,3 +1,14 @@
+## [1.0.2](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.1...v1.0.2) (2022-10-12)
+
+
+### Bug Fixes
+
+* fix build.fsx for nuget ([d830efa](https://github.com/informatievlaanderen/basisregisters-sqs/commit/d830efa2916db64e31aa71262caa33b00472dbe2))
+* fix nuget ([fde8564](https://github.com/informatievlaanderen/basisregisters-sqs/commit/fde85647d9600a56494338cd2a80191ad4491343))
+* fix nuget ([0dadc9b](https://github.com/informatievlaanderen/basisregisters-sqs/commit/0dadc9bbebb1aee7a46692aa0ee59c99c0332775))
+* fix paket.template ([e8db20f](https://github.com/informatievlaanderen/basisregisters-sqs/commit/e8db20f70089f9c8a0ffe8186f5c04aa5b6890bf))
+* ignore Lib_Pack? ([fbb5ff8](https://github.com/informatievlaanderen/basisregisters-sqs/commit/fbb5ff8824783fba150ff58ce4be9176b9846a23))
+
 ## [1.0.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.0...v1.0.1) (2022-10-12)
 
 
