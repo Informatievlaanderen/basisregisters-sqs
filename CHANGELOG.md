@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.0...v1.0.1) (2022-10-12)
+
+
+### Bug Fixes
+
+* add nuget to build.fsx ([9ad38e9](https://github.com/informatievlaanderen/basisregisters-sqs/commit/9ad38e9f9b39abc3cf5cb0297bbd2a263cef1865))
+
 # 1.0.0 (2022-10-12)
 
 
