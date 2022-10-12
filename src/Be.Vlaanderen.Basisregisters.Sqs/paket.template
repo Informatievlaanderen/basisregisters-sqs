@@ -19,5 +19,5 @@ dependencies
     MediatR >= LOCKEDVERSION
 
 files
-  Be.Vlaanderen.Basisregisters.Sqs.dll => lib\net6.0
-  Be.Vlaanderen.Basisregisters.Sqs.pdb => lib\net6.0
+  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.Sqs.dll => lib\net6.0
+  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.Sqs.pdb => lib\net6.0
