@@ -1,6 +1,6 @@
 {
   "name": "basisregisters-sqs",
-  "version": "1.0.1",
+  "version": "4.3.0",
   "description": "AWS SQS Helpers.",
   "author": "Basisregisters Vlaanderen",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "8.0.5",
+    "@semantic-release/github": "8.0.4",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "commitizen": "4.2.4",
@@ -25,7 +25,7 @@
     "form-data": "4.0.0",
     "husky": "7.0.4",
     "merge": "2.1.1",
-    "semantic-release": "19.0.3",
+    "semantic-release": "19.0.2",
     "lodash": "4.17.21"
   },
   "scripts": {
@@ -69,6 +69,11 @@
           "type": "docs",
           "scope": "README",
           "release": "patch"
+        },
+        {
+          "type": "refactor",
+          "scope": "/core.*/",
+          "release": "minor"
         },
         {
           "type": "refactor",
@@ -120,7 +125,7 @@
       },
       {
         "path": "@semantic-release/exec",
-        "cmd": "CI_BUILD_NUMBER=${nextRelease.version} ./build.sh Containerize"
+        "cmd": "CI_BUILD_NUMBER=${nextRelease.version} ./build.sh PackageAll"
       },
       {
         "path": "@semantic-release/git",
