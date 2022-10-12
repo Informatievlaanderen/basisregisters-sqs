@@ -6,85 +6,48 @@ nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.5 //"
 
 #load "packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/build-generic.fsx"
 
-open Fake
 open Fake.Core
 open Fake.Core.TargetOperators
-open Fake.IO
 open Fake.IO.FileSystemOperators
 open ``Build-generic``
 
-let product = "Basisregisters Vlaanderen"
-let copyright = "Copyright (c) Vlaamse overheid"
-let company = "Vlaamse overheid"
-
-let dockerRepository = "basisregisters-sqs"
-let assemblyVersionNumber = (sprintf "2.%s")
+let assemblyVersionNumber = (sprintf "%s.0")
 let nugetVersionNumber = (sprintf "%s")
 
-let buildSolution = buildSolution assemblyVersionNumber
 let buildSource = build assemblyVersionNumber
 let buildTest = buildTest assemblyVersionNumber
-let setVersions = (setSolutionVersions assemblyVersionNumber product copyright company)
-let test = testSolution
 let publishSource = publish assemblyVersionNumber
-let pack = pack nugetVersionNumber
-let containerize = containerize dockerRepository
-let push = push dockerRepository
+let pack = packSolution nugetVersionNumber
 
-supportedRuntimeIdentifiers <- [ "msil"; "linux-x64" ]
+supportedRuntimeIdentifiers <- [ "linux-x64" ] 
 
-// Solution -----------------------------------------------------------------------
-Target.create "Restore_Solution" (fun _ -> restore "basisregisters-sqs")
-
-Target.create "Build_Solution" (fun _ ->
-  setVersions "SolutionInfo.cs"
-  buildSolution "basisregisters-sqs"
+// Library ------------------------------------------------------------------------
+Target.create "Lib_Build" (fun _ ->
+    buildSource "Be.Vlaanderen.Basisregisters.Sqs"
 )
 
-Target.create "Test_Solution" (fun _ -> test "basisregisters-sqs")
+Target.create "Lib_Publish" (fun _ ->
+    publishSource "Be.Vlaanderen.Basisregisters.Sqs"
+)
 
-Target.create "Publish_Solution" (fun _ ->
-  [ ] |> List.iter publishSource
- )
-
-Target.create "Pack_Solution" (fun _ ->
-  [ 
-    "Be.Vlaanderen.Basisregisters.Sqs"
-  ] |> List.iter pack)
+Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.Sqs")
 
 // --------------------------------------------------------------------------------
+Target.create "PublishAll" ignore
+Target.create "PackageAll" ignore
 
-Target.create "Build" ignore
-Target.create "Test" ignore
-Target.create "Publish" ignore
-Target.create "Pack" ignore
-Target.create "Containerize" ignore
-Target.create "Push" ignore
+// Publish ends up with artifacts in the build folder
+"DotNetCli"
+==> "Clean"
+==> "Restore"
+==> "Lib_Build"
+==> "Lib_Publish"
+==> "PublishAll"
 
-"NpmInstall"
-  ==> "DotNetCli"
-  ==> "Clean"
-  ==> "Restore_Solution"
-  ==> "Build_Solution"
-  ==> "Build"
+// Package ends up with local NuGet packages
+"PublishAll"
+==> "Lib_Pack"
+==> "PackageAll"
 
-"Build"
-  ==> "Test_Solution"
-  ==> "Test"
-
-"Test"
-  ==> "Publish_Solution"
-  ==> "Publish"
-
-"Publish"
-  ==> "Pack_Solution"
-  ==> "Pack"
-
-"Pack"
-// Possibly add more projects to containerize here
-
-"Containerize"
-// Possibly add more projects to push here
-
-// By default we build & test
-Target.runOrDefault "Test"
+// Publish ends up with artifacts in the build folder
+Target.runOrDefault "Lib_Build"
