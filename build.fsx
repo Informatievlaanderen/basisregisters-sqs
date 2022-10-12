@@ -48,7 +48,9 @@ Target.create "Publish_Solution" (fun _ ->
  )
 
 Target.create "Pack_Solution" (fun _ ->
-  [ ] |> List.iter pack)
+  [ 
+    "Be.Vlaanderen.Basisregisters.Sqs"
+  ] |> List.iter pack)
 
 // --------------------------------------------------------------------------------
 
