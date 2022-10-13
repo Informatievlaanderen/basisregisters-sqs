@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.5...v1.0.6) (2022-10-13)
+
+
+### Bug Fixes
+
+* fix nuget push ([#22](https://github.com/informatievlaanderen/basisregisters-sqs/issues/22)) ([11a171e](https://github.com/informatievlaanderen/basisregisters-sqs/commit/11a171e8ea1b313ee81530e7f23ad02c0b022776))
+
 ## [1.0.5](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.4...v1.0.5) (2022-10-13)
 
 
