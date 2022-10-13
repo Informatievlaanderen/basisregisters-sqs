@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.7...v1.0.8) (2022-10-13)
+
+
+### Bug Fixes
+
+* fix nuget path ([53fcf3e](https://github.com/informatievlaanderen/basisregisters-sqs/commit/53fcf3ed6704f16654a8cf600da23d765dcb4720))
+
 ## [1.0.7](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.6...v1.0.7) (2022-10-13)
 
 
