@@ -1,3 +1,17 @@
+## [1.0.5](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.4...v1.0.5) (2022-10-13)
+
+
+### Bug Fixes
+
+* release workflow nuget ([e8d6aca](https://github.com/informatievlaanderen/basisregisters-sqs/commit/e8d6aca63ee63646774ca3e89429cd1bb45693c4))
+
+## [1.0.4](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.3...v1.0.4) (2022-10-13)
+
+
+### Bug Fixes
+
+* change README.md ([be87833](https://github.com/informatievlaanderen/basisregisters-sqs/commit/be8783377de7cffcd51efd3e0c867075259a3891))
+
 ## [1.0.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.2...v1.0.3) (2022-10-13)
 
 
