@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.2...v1.0.3) (2022-10-13)
+
+
+### Bug Fixes
+
+* fix csproj ([e2ee101](https://github.com/informatievlaanderen/basisregisters-sqs/commit/e2ee101eb16bd97e7e1beebb03d10d8b5aca1573))
+* restore pack folder ([9bea5f4](https://github.com/informatievlaanderen/basisregisters-sqs/commit/9bea5f413690397c6d635a6a3a01a12ac4ec3ed8))
+* trying publish folder for nuget ([b0379c5](https://github.com/informatievlaanderen/basisregisters-sqs/commit/b0379c594d6f0fbe5e7b6e13addbf7d38f1a58b0))
+
 ## [1.0.2](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.1...v1.0.2) (2022-10-12)
 
 
