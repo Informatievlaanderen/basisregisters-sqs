@@ -104,7 +104,7 @@ jobs:
       if: env.RELEASE_VERSION != 'none'
       shell: bash
       run: |
-        node packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-nuget.js dist/$REPONAME/Be.Vlaanderen.Basisregisters.Sqs.$SEMVER.nupkg
+        dotnet nuget push dist/nuget/Be.Vlaanderen.Basisregisters.Sqs.$SEMVER.nupkg  --source nuget.org --api-key $NUGET_API_KEY
       env:
         REPONAME: Be.Vlaanderen.Basisregisters.Sqs
         SEMVER: ${{ env.RELEASE_VERSION }}
