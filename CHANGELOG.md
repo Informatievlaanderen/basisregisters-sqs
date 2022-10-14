@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.0...v1.1.1) (2022-10-14)
+
+
+### Bug Fixes
+
+* fix lambda paket.template ([d77adf9](https://github.com/informatievlaanderen/basisregisters-sqs/commit/d77adf9f070e36b453bef49ec81891fd524a155e))
+
 # [1.1.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.10...v1.1.0) (2022-10-14)
 
 
