@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.10...v1.1.0) (2022-10-14)
+
+
+### Bug Fixes
+
+* add IfMatchHeaderValueMismatchException ([fb0c721](https://github.com/informatievlaanderen/basisregisters-sqs/commit/fb0c7213ca37f747a0935b22b923dc05fd0bba26))
+* fix build.fsx & release.yml ([4cbb666](https://github.com/informatievlaanderen/basisregisters-sqs/commit/4cbb666f6d784fbc252bc65d501b4e03d1e511ca))
+* use file-scoped namespaces ([ebcf06b](https://github.com/informatievlaanderen/basisregisters-sqs/commit/ebcf06b604eea6e62e8358afe22c4070229eac36))
+
+
+### Features
+
+* add lambda code ([5da0729](https://github.com/informatievlaanderen/basisregisters-sqs/commit/5da0729402221e5c2735c32f5ccb5ece9fc96d8d))
+
 ## [1.0.10](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.9...v1.0.10) (2022-10-14)
 
 
