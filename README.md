@@ -1,3 +1,3 @@
 # basisregisters-sqs
 
-AWS SQS Helpers.
+AWS SQS and Lambda Helpers.
