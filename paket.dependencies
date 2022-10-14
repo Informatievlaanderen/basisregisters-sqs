@@ -3,11 +3,15 @@ source https://api.nuget.org/v3/index.json
 
 // PRODUCTION STUFF
 
+nuget Be.Vlaanderen.Basisregisters.Api 18.1.0
+nuget Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency 7.0.0
 nuget Be.Vlaanderen.Basisregisters.GrAr.Provenance 17.28.0
 nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 4.3.2
+nuget Be.Vlaanderen.Basisregisters.Sqs 1.0.10
 nuget Be.Vlaanderen.Basisregisters.TicketingService.Abstractions 1.7.11
 
 nuget MediatR 10.0.1
+nuget Microsoft.Extensions.Http.Polly 6.0.3
 
 // VBR STUFF
 nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.5

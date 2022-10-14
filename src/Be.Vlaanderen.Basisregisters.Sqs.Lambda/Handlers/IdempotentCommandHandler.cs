@@ -1,21 +1,19 @@
-﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers
+namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-    using Be.Vlaanderen.Basisregisters.CommandHandling;
-    using Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency;
-    using Be.Vlaanderen.Basisregisters.Utilities.HexByteConvertor;
-
-    //using Abstractions.Exceptions;
-    //using Be.Vlaanderen.Basisregisters.Api.Exceptions;
-    //using Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency;
-
-    //using Microsoft.AspNetCore.Http;
-    //using Microsoft.EntityFrameworkCore;
+    using Api.Exceptions;
+    using CommandHandling;
+    using CommandHandling.Idempotency;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.EntityFrameworkCore;
+    using Sqs.Exceptions;
+    using Utilities.HexByteConvertor;
 
     public sealed class IdempotentCommandHandler : IIdempotentCommandHandler
     {
