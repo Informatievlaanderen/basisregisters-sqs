@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.4...v1.1.5) (2022-10-14)
+
+
+### Bug Fixes
+
+* use ef core 6.0.3 ([b6eb146](https://github.com/informatievlaanderen/basisregisters-sqs/commit/b6eb14664c046c362f25c782c202829a20e3d2b8))
+
 ## [1.1.4](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.3...v1.1.4) (2022-10-14)
 
 
