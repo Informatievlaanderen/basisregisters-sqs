@@ -1,4 +1,10 @@
-﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers
+﻿using System.Linq;
+using Be.Vlaanderen.Basisregisters.Api.Exceptions;
+using Be.Vlaanderen.Basisregisters.Sqs.Exceptions;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+
+namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers
 {
     using System;
     using System.Collections.Generic;
@@ -6,16 +12,9 @@
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-    using Be.Vlaanderen.Basisregisters.CommandHandling;
-    using Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency;
-    using Be.Vlaanderen.Basisregisters.Utilities.HexByteConvertor;
-
-    //using Abstractions.Exceptions;
-    //using Be.Vlaanderen.Basisregisters.Api.Exceptions;
-    //using Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency;
-
-    //using Microsoft.AspNetCore.Http;
-    //using Microsoft.EntityFrameworkCore;
+    using CommandHandling;
+    using CommandHandling.Idempotency;
+    using Utilities.HexByteConvertor;
 
     public sealed class IdempotentCommandHandler : IIdempotentCommandHandler
     {
