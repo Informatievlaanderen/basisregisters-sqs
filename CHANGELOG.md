@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.2...v1.1.3) (2022-10-14)
+
+
+### Bug Fixes
+
+* build.fsx Pack ([dd01086](https://github.com/informatievlaanderen/basisregisters-sqs/commit/dd0108640779d2afe130a16c12c22461e955790b))
+
 ## [1.1.2](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.1...v1.1.2) (2022-10-14)
 
 
