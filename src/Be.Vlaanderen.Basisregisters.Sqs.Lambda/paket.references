@@ -1,0 +1,7 @@
+﻿Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency
+Be.Vlaanderen.Basisregisters.GrAr.Provenance
+Be.Vlaanderen.Basisregisters.Sqs
+Be.Vlaanderen.Basisregisters.TicketingService.Abstractions
+MediatR
+Microsoft.Data.SqlClient
+Microsoft.Extensions.Http.Polly
