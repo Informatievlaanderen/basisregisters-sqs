@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.8...v1.0.9) (2022-10-14)
+
+
+### Bug Fixes
+
+* add ETagResponse ([54637ae](https://github.com/informatievlaanderen/basisregisters-sqs/commit/54637aeb35a3b26f67537d3b8a2a6598b5963ec3))
+
 ## [1.0.8](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.0.7...v1.0.8) (2022-10-13)
 
 
