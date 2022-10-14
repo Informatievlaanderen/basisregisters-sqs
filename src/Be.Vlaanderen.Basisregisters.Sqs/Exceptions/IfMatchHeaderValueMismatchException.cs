@@ -1,20 +1,19 @@
-﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Exceptions
+﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Exceptions;
+
+using System;
+using System.Runtime.Serialization;
+
+[Serializable]
+public sealed class IfMatchHeaderValueMismatchException : Exception
 {
-    using System;
-    using System.Runtime.Serialization;
+    public IfMatchHeaderValueMismatchException()
+    { }
 
-    [Serializable]
-    public sealed class IfMatchHeaderValueMismatchException : Exception
-    {
-        public IfMatchHeaderValueMismatchException()
-        { }
+    public IfMatchHeaderValueMismatchException(string? message)
+        : base(message)
+    { }
 
-        public IfMatchHeaderValueMismatchException(string? message)
-            : base(message)
-        { }
-
-        private IfMatchHeaderValueMismatchException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        { }
-    }
+    private IfMatchHeaderValueMismatchException(SerializationInfo info, StreamingContext context)
+        : base(info, context)
+    { }
 }

@@ -1,10 +1,9 @@
-﻿using System;
+﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Infrastructure;
+
+using System;
 using System.Threading.Tasks;
 
-namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Infrastructure
+public interface ICustomRetryPolicy
 {
-    public interface ICustomRetryPolicy
-    {
-        Task Retry(Func<Task> functionToRetry);
-    }
+    Task Retry(Func<Task> functionToRetry);
 }
