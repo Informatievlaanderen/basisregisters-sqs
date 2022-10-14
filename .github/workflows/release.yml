@@ -105,6 +105,7 @@ jobs:
       shell: bash
       run: |
         dotnet nuget push dist/Be.Vlaanderen.Basisregisters.Sqs/Be.Vlaanderen.Basisregisters.Sqs.$SEMVER.nupkg  --source nuget.org --api-key $NUGET_API_KEY
+        dotnet nuget push dist/Be.Vlaanderen.Basisregisters.Sqs.Lambda/Be.Vlaanderen.Basisregisters.Sqs.Lambda.$SEMVER.nupkg  --source nuget.org --api-key $NUGET_API_KEY
       env:
         REPONAME: Be.Vlaanderen.Basisregisters.Sqs
         SEMVER: ${{ env.RELEASE_VERSION }}

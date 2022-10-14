@@ -24,13 +24,18 @@ supportedRuntimeIdentifiers <- [ "linux-x64" ]
 // Library ------------------------------------------------------------------------
 Target.create "Lib_Build" (fun _ ->
     buildSource "Be.Vlaanderen.Basisregisters.Sqs"
+    buildSource "Be.Vlaanderen.Basisregisters.Sqs.Lambda"
 )
 
 Target.create "Lib_Publish" (fun _ ->
     publishSource "Be.Vlaanderen.Basisregisters.Sqs"
+    publishSource "Be.Vlaanderen.Basisregisters.Sqs.Lambda"
 ) 
 
-Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.Sqs")
+Target.create "Lib_Pack" (fun _ -> 
+    pack "Be.Vlaanderen.Basisregisters.Sqs"
+    pack "Be.Vlaanderen.Basisregisters.Sqs.Lambda"
+)
 
 // --------------------------------------------------------------------------------
 Target.create "PublishAll" ignore
