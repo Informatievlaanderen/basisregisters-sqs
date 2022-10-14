@@ -5,4 +5,6 @@ Be.Vlaanderen.Basisregisters.Sqs
 Be.Vlaanderen.Basisregisters.TicketingService.Abstractions
 MediatR
 Microsoft.Data.SqlClient
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Relational
 Microsoft.Extensions.Http.Polly
