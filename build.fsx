@@ -32,10 +32,7 @@ Target.create "Lib_Publish" (fun _ ->
     publishSource "Be.Vlaanderen.Basisregisters.Sqs.Lambda"
 ) 
 
-Target.create "Lib_Pack" (fun _ -> 
-    pack "Be.Vlaanderen.Basisregisters.Sqs"
-    pack "Be.Vlaanderen.Basisregisters.Sqs.Lambda"
-)
+Target.create "Lib_Pack" (fun _ -> pack "basisregisters-sqs")
 
 // --------------------------------------------------------------------------------
 Target.create "PublishAll" ignore
