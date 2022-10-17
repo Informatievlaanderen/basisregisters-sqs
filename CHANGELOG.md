@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.5...v1.1.6) (2022-10-17)
+
+
+### Bug Fixes
+
+* rename HandleAggregateIdIsNotFoundException ([3b40e04](https://github.com/informatievlaanderen/basisregisters-sqs/commit/3b40e04700b84bd76d0670b57a0d1fdf8e40b14f))
+
 ## [1.1.5](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.4...v1.1.5) (2022-10-14)
 
 
