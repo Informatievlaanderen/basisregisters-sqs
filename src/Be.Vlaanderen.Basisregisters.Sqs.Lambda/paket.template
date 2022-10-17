@@ -16,6 +16,8 @@ description AWS SQS Lambda helpers.
 
 dependencies
   framework: net6.0
+    Be.Vlaanderen.Basisregisters.Api >= LOCKEDVERSION
+    Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency >= LOCKEDVERSION
     MediatR >= LOCKEDVERSION
 
 files
