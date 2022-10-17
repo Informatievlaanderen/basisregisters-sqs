@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.6...v1.1.7) (2022-10-17)
+
+
+### Bug Fixes
+
+* update dependencies ([8237466](https://github.com/informatievlaanderen/basisregisters-sqs/commit/8237466b8e9a823f050afe0f4eda46110692c210))
+
 ## [1.1.6](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.5...v1.1.6) (2022-10-17)
 
 
