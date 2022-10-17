@@ -1,6 +1,5 @@
 ﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers;
 
-using System;
 using System.Configuration;
 using System.Threading;
 using System.Threading.Tasks;
@@ -62,7 +61,7 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         }
         catch (AggregateIdIsNotFoundException)
         {
-            await HandleException<AggregateIdIsNotFoundException>(request, cancellationToken);
+            await HandleAggregateIdIsNotFoundException(request, cancellationToken);
         }
         catch (IfMatchHeaderValueMismatchException)
         {
@@ -85,8 +84,7 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         return Unit.Value;
     }
 
-    protected abstract Task HandleException<T>(TSqsLambdaRequest request, CancellationToken cancellationToken)
-        where T : Exception;
+    protected abstract Task HandleAggregateIdIsNotFoundException(TSqsLambdaRequest request, CancellationToken cancellationToken);
 
     protected abstract Task ValidateIfMatchHeaderValue(TSqsLambdaRequest request, CancellationToken cancellationToken);
 }
