@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.7...v1.2.0) (2022-10-24)
+
+
+### Features
+
+* make sqsLambdaRequest a record ([7ec1df4](https://github.com/informatievlaanderen/basisregisters-sqs/commit/7ec1df4dbc03e966ed883a0bb58c4ed42fa3eb73))
+
 ## [1.1.7](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.6...v1.1.7) (2022-10-17)
 
 
