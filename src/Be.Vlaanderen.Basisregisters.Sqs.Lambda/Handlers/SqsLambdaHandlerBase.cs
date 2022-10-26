@@ -15,6 +15,8 @@ using TicketingService.Abstractions;
 public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<TSqsLambdaRequest>
     where TSqsLambdaRequest : SqsLambdaRequest
 {
+    protected abstract string DetailUrlFormatKey { get; }
+    
     protected readonly ICustomRetryPolicy RetryPolicy;
     protected readonly ITicketing Ticketing;
 
@@ -31,10 +33,10 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         Ticketing = ticketing;
         IdempotentCommandHandler = idempotentCommandHandler;
 
-        DetailUrlFormat = configuration["DetailUrl"];
+        DetailUrlFormat = configuration[DetailUrlFormatKey];
         if (string.IsNullOrEmpty(DetailUrlFormat))
         {
-            throw new ConfigurationErrorsException("'DetailUrl' cannot be found in the configuration");
+            throw new ConfigurationErrorsException($"'{DetailUrlFormatKey}' cannot be found in the configuration");
         }
     }
 
