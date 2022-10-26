@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.2.0...v1.3.0) (2022-10-26)
+
+
+### Features
+
+* remove DetailUrlFormat property from SqsLambdaHandlerBase ([8b45c44](https://github.com/informatievlaanderen/basisregisters-sqs/commit/8b45c442c1ea4d51af942f1acd034a26e4e1758c))
+
 # [1.2.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.1.7...v1.2.0) (2022-10-24)
 
 
