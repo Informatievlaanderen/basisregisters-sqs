@@ -1,13 +1,11 @@
 ﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers;
 
-using System.Configuration;
 using System.Threading;
 using System.Threading.Tasks;
 using AggregateSource;
 using Exceptions;
 using Infrastructure;
 using MediatR;
-using Microsoft.Extensions.Configuration;
 using Requests;
 using Responses;
 using TicketingService.Abstractions;
@@ -19,10 +17,8 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
     protected readonly ITicketing Ticketing;
 
     protected IIdempotentCommandHandler IdempotentCommandHandler { get; }
-    protected string DetailUrlFormat { get; }
 
     protected SqsLambdaHandlerBase(
-        IConfiguration configuration,
         ICustomRetryPolicy retryPolicy,
         ITicketing ticketing,
         IIdempotentCommandHandler idempotentCommandHandler)
@@ -30,12 +26,6 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         RetryPolicy = retryPolicy;
         Ticketing = ticketing;
         IdempotentCommandHandler = idempotentCommandHandler;
-
-        DetailUrlFormat = configuration["DetailUrl"];
-        if (string.IsNullOrEmpty(DetailUrlFormat))
-        {
-            throw new ConfigurationErrorsException("'DetailUrl' cannot be found in the configuration");
-        }
     }
 
     protected abstract Task<ETagResponse> InnerHandle(TSqsLambdaRequest request, CancellationToken cancellationToken);
