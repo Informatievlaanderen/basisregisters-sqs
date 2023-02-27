@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.3.0...v1.3.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* bump mediatr ([bbf9229](https://github.com/informatievlaanderen/basisregisters-sqs/commit/bbf92297733d3e0cad43bb608c5189ed47c9262c))
+* remove test from build.yml ([f68bf4a](https://github.com/informatievlaanderen/basisregisters-sqs/commit/f68bf4ad4fa01e70f88dd31f31a466acbe77910d))
+
 # [1.3.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.2.0...v1.3.0) (2022-10-26)
 
 
