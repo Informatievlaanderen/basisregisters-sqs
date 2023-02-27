@@ -32,7 +32,7 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
 
     protected abstract TicketError? MapDomainException(DomainException exception, TSqsLambdaRequest request);
 
-    public async Task<Unit> Handle(TSqsLambdaRequest request, CancellationToken cancellationToken)
+    public async Task Handle(TSqsLambdaRequest request, CancellationToken cancellationToken)
     {
         try
         {
@@ -70,8 +70,6 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
                 ticketError,
                 cancellationToken);
         }
-
-        return Unit.Value;
     }
 
     protected abstract Task HandleAggregateIdIsNotFoundException(TSqsLambdaRequest request, CancellationToken cancellationToken);
