@@ -10,7 +10,7 @@ nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 4.3.2
 nuget Be.Vlaanderen.Basisregisters.Sqs 1.0.10
 nuget Be.Vlaanderen.Basisregisters.TicketingService.Abstractions 1.7.11
 
-nuget MediatR 10.0.1
+nuget MediatR 12.0.1
 nuget Microsoft.EntityFrameworkCore 6.0.3
 nuget Microsoft.EntityFrameworkCore.Relational 6.0.3
 nuget Microsoft.Extensions.Http.Polly 6.0.3
