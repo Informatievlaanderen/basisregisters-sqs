@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.0.0...v2.0.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* style add new line EOF to bump build ([7845736](https://github.com/informatievlaanderen/basisregisters-sqs/commit/784573682cf55ee0f50ddaf53782f0667e76160c))
+
 # [2.0.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.3.1...v2.0.0) (2023-03-21)
 
 
