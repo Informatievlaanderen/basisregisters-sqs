@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.3.1...v2.0.0) (2023-03-21)
+
+
+### Code Refactoring
+
+* sqsLambdaHandlerBase.InnerHandle now returns Task<object> ([4d63753](https://github.com/informatievlaanderen/basisregisters-sqs/commit/4d6375369a02065744bf3ab015100249b55feab9))
+
+
+### BREAKING CHANGES
+
+* sqsLambdaHandlerBase.InnerHandle now returns Task<object> instead of
+Task<ETagResponse>
+
 ## [1.3.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v1.3.0...v1.3.1) (2023-02-27)
 
 
