@@ -7,7 +7,6 @@ using Exceptions;
 using Infrastructure;
 using MediatR;
 using Requests;
-using Responses;
 using TicketingService.Abstractions;
 
 public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<TSqsLambdaRequest>
@@ -28,7 +27,7 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         IdempotentCommandHandler = idempotentCommandHandler;
     }
 
-    protected abstract Task<ETagResponse> InnerHandle(TSqsLambdaRequest request, CancellationToken cancellationToken);
+    protected abstract Task<object> InnerHandle(TSqsLambdaRequest request, CancellationToken cancellationToken);
 
     protected abstract TicketError? MapDomainException(DomainException exception, TSqsLambdaRequest request);
 
@@ -40,13 +39,13 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
 
             await Ticketing.Pending(request.TicketId, cancellationToken);
 
-            ETagResponse? etag = null;
+            object? innerHandleResult = null;
 
-            await RetryPolicy.Retry(async () => etag = await InnerHandle(request, cancellationToken));
+            await RetryPolicy.Retry(async () => innerHandleResult = await InnerHandle(request, cancellationToken));
 
             await Ticketing.Complete(
                 request.TicketId,
-                new TicketResult(etag),
+                new TicketResult(innerHandleResult),
                 cancellationToken);
         }
         catch (AggregateIdIsNotFoundException)
