@@ -1,3 +1,4 @@
+STRATEGY: MIN
 RESTRICTION: == net6.0
 NUGET
   remote: https://api.nuget.org/v3/index.json
@@ -214,8 +215,6 @@ NUGET
     Be.Vlaanderen.Basisregisters.Middleware.AddProblemJsonHeader (2.0)
     Be.Vlaanderen.Basisregisters.ProblemDetails (8.0.1)
       System.Reflection.Metadata (>= 6.0.1)
-    Be.Vlaanderen.Basisregisters.Sqs (1.0.10)
-      MediatR (>= 10.0.1)
     Be.Vlaanderen.Basisregisters.TicketingService.Abstractions (1.7.11)
     Be.Vlaanderen.Basisregisters.Utilities.HashCodeCalculator (3.0)
     Be.Vlaanderen.Basisregisters.Utilities.HexByteConvertor (3.0)
