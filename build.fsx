@@ -13,7 +13,6 @@ open ``Build-generic``
 
 let assemblyVersionNumber = (sprintf "%s.0")
 let nugetVersionNumber = (sprintf "%s")
-
 let buildSource = build assemblyVersionNumber
 let buildTest = buildTest assemblyVersionNumber
 let publishSource = publish assemblyVersionNumber
