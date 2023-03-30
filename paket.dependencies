@@ -7,7 +7,7 @@ source https://api.nuget.org/v3/index.json
 nuget Be.Vlaanderen.Basisregisters.Api 18.1.0
 nuget Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency 7.0.0
 nuget Be.Vlaanderen.Basisregisters.GrAr.Provenance 17.28.0
-nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 4.3.2
+nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 4.8.2
 nuget Be.Vlaanderen.Basisregisters.TicketingService.Abstractions 1.7.11
 
 nuget MediatR 12.0.1
