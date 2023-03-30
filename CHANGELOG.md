@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.0.2...v2.0.3) (2023-03-30)
+
+
+### Bug Fixes
+
+* bump messagehandling ([c58e4e8](https://github.com/informatievlaanderen/basisregisters-sqs/commit/c58e4e8c00fc8943c5755b7f05df2591ff89edd2))
+
 ## [2.0.2](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.0.1...v2.0.2) (2023-03-23)
 
 
