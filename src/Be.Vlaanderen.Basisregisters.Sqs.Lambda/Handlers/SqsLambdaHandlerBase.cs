@@ -1,9 +1,12 @@
 ﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers;
 
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AggregateSource;
 using Exceptions;
+using FluentValidation;
 using Infrastructure;
 using MediatR;
 using Requests;
@@ -31,6 +34,13 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
 
     protected abstract TicketError? MapDomainException(DomainException exception, TSqsLambdaRequest request);
 
+    protected virtual TicketError[] MapValidationException(ValidationException exception, TSqsLambdaRequest request)
+        => exception.Errors?
+            .Select(error => new TicketError(error.ErrorMessage, error.ErrorCode))
+            .ToArray()
+            ??
+            Array.Empty<TicketError>();
+
     public async Task Handle(TSqsLambdaRequest request, CancellationToken cancellationToken)
     {
         try
@@ -54,21 +64,39 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         }
         catch (IfMatchHeaderValueMismatchException)
         {
-            await Ticketing.Error(
-                request.TicketId,
-                new TicketError("Als de If-Match header niet overeenkomt met de laatste ETag.", "PreconditionFailed"),
-                cancellationToken);
+            await TicketErrorAsync(new TicketError("Als de If-Match header niet overeenkomt met de laatste ETag.", "PreconditionFailed"), request, cancellationToken);
+        }
+        catch (ValidationException exception)
+        {
+            var ticketErrors = MapValidationException(exception, request);
+
+            if (ticketErrors.Any())
+            {
+                await Ticketing.Error(
+                    request.TicketId,
+                    ticketErrors,
+                    cancellationToken);
+            }
+            else
+            {
+                await TicketErrorAsync(new TicketError(exception.Message, ""), request, cancellationToken);
+            }
         }
         catch (DomainException exception)
         {
             var ticketError = MapDomainException(exception, request);
             ticketError ??= new TicketError(exception.Message, "");
 
-            await Ticketing.Error(
-                request.TicketId,
-                ticketError,
-                cancellationToken);
+            await TicketErrorAsync(ticketError, request, cancellationToken);
         }
+    }
+
+    private async Task TicketErrorAsync(TicketError ticketError, TSqsLambdaRequest request, CancellationToken cancellationToken)
+    {
+        await Ticketing.Error(
+            request.TicketId,
+            ticketError,
+            cancellationToken);
     }
 
     protected abstract Task HandleAggregateIdIsNotFoundException(TSqsLambdaRequest request, CancellationToken cancellationToken);
