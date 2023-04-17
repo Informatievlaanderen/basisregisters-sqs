@@ -34,12 +34,14 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
 
     protected abstract TicketError? MapDomainException(DomainException exception, TSqsLambdaRequest request);
 
-    protected virtual TicketError[] MapValidationException(ValidationException exception, TSqsLambdaRequest request)
-        => exception.Errors?
-            .Select(error => new TicketError(error.ErrorMessage, error.ErrorCode))
-            .ToArray()
-            ??
-            Array.Empty<TicketError>();
+    protected virtual TicketError? MapValidationException(ValidationException exception, TSqsLambdaRequest request)
+    {
+        if (exception.Errors is null || !exception.Errors.Any()) return null;
+
+        var inner = exception.Errors.Select(error => new TicketError(error.ErrorMessage, error.ErrorCode)).ToList();
+        return new TicketError(inner);
+
+    }
 
     public async Task Handle(TSqsLambdaRequest request, CancellationToken cancellationToken)
     {
@@ -68,19 +70,10 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         }
         catch (ValidationException exception)
         {
-            var ticketErrors = MapValidationException(exception, request);
+            var ticketError = MapValidationException(exception, request);
+            ticketError ??= new TicketError(exception.Message, "");
 
-            if (ticketErrors.Any())
-            {
-                await Ticketing.Error(
-                    request.TicketId,
-                    ticketErrors,
-                    cancellationToken);
-            }
-            else
-            {
-                await TicketErrorAsync(new TicketError(exception.Message, ""), request, cancellationToken);
-            }
+            await TicketErrorAsync(ticketError, request, cancellationToken);
         }
         catch (DomainException exception)
         {
