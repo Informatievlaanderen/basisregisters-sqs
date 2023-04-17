@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.0.3...v2.1.0) (2023-04-17)
+
+
+### Bug Fixes
+
+* Updated library into latest ticketing system version ([b6e0d3d](https://github.com/informatievlaanderen/basisregisters-sqs/commit/b6e0d3ddbc0e8f70a9851e1afd1a17b0587acf44))
+
+
+### Features
+
+* Added support for validation exceptions inside ticketing service ([eb7c37e](https://github.com/informatievlaanderen/basisregisters-sqs/commit/eb7c37e9d1198a63fbca4ad87002431660d43805))
+
 ## [2.0.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.0.2...v2.0.3) (2023-03-30)
 
 
