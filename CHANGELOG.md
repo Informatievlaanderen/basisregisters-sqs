@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.0...v2.1.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* Incorrect TicketError construction ([02d1232](https://github.com/informatievlaanderen/basisregisters-sqs/commit/02d123261f91a882e684126fd2af664f7da04470))
+
 # [2.1.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.0.3...v2.1.0) (2023-04-17)
 
 
