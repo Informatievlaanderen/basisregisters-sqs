@@ -36,11 +36,13 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
 
     protected virtual TicketError? MapValidationException(ValidationException exception, TSqsLambdaRequest request)
     {
-        if (exception.Errors is null || !exception.Errors.Any()) return null;
-
-        var inner = exception.Errors.Select(error => new TicketError(error.ErrorMessage, error.ErrorCode)).ToList();
-        return new TicketError(inner);
-
+        if (exception.Errors is not null)
+        {
+            return exception.Errors.Count() == 1
+                ? new TicketError(exception.Errors.Single().ErrorMessage, exception.Errors.Single().ErrorCode)
+                : new TicketError(exception.Errors.Select(error => new TicketError(error.ErrorMessage, error.ErrorCode)).ToList());
+        }
+        return null;
     }
 
     public async Task Handle(TSqsLambdaRequest request, CancellationToken cancellationToken)
