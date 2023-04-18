@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.1...v2.1.2) (2023-04-18)
+
+
+### Bug Fixes
+
+* style to trigger build ([2eb5d00](https://github.com/informatievlaanderen/basisregisters-sqs/commit/2eb5d0027b4061be7c58b859fa30a72ab074bc2d))
+
 ## [2.1.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.0...v2.1.1) (2023-04-18)
 
 
