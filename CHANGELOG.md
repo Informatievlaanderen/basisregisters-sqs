@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.2...v2.1.3) (2023-04-18)
+
+
+### Bug Fixes
+
+* Updated ticketing service abstractions ([d212aca](https://github.com/informatievlaanderen/basisregisters-sqs/commit/d212acad2720043038705744b6ada9bee4a2c61d))
+
 ## [2.1.2](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.1...v2.1.2) (2023-04-18)
 
 
