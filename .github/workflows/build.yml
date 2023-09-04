@@ -84,7 +84,7 @@ jobs:
     - name: Build
       shell: bash
       run: |
-        dotnet build --nologo --no-restore --no-incremental --configuration Debug basisregisters-sqs.sln
+        dotnet build --nologo --no-restore --no-incremental --configuration Debug Be.Vlaanderen.Basisregisters.Sqs.sln
 
     - name: Sonar end build & analyze
       env:
