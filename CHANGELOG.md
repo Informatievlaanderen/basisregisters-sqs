@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.3...v3.0.0) (2024-03-14)
+
+
+### Features
+
+* move to dotnet 8.0.2 ([645a517](https://github.com/informatievlaanderen/basisregisters-sqs/commit/645a517576c19e9e1c90618a178a1cda96cf2d5b))
+
+
+### BREAKING CHANGES
+
+* move to dotnet 8.0.2 + Remove own IIdempotentCommandHandler and use IIdempotentCommandHandler from CommandHandling
+
 ## [2.1.3](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.2...v2.1.3) (2023-04-18)
 
 
