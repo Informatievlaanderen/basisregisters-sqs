@@ -1,10 +1,10 @@
 ﻿namespace Be.Vlaanderen.Basisregisters.Sqs.Lambda.Handlers;
 
-using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AggregateSource;
+using CommandHandling.Idempotency;
 using Exceptions;
 using FluentValidation;
 using Infrastructure;
