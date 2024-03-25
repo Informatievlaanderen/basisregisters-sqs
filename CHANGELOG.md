@@ -1,3 +1,5 @@
+## [3.0.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v3.0.0...v3.0.1) (2024-03-25)
+
 # [3.0.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v2.1.3...v3.0.0) (2024-03-14)
 
 
