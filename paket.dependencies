@@ -3,12 +3,7 @@ strategy: min
 source https://api.nuget.org/v3/index.json
 
 // PRODUCTION STUFF
-
-nuget Be.Vlaanderen.Basisregisters.Api 21.0.0
-nuget Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency 9.0.1
-nuget Be.Vlaanderen.Basisregisters.GrAr.Provenance 21.0.0
-nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 5.0.1
-nuget Be.Vlaanderen.Basisregisters.TicketingService.Abstractions 2.0.0
+nuget FluentValidation 11.9.0
 
 nuget MediatR 12.2.0
 nuget Microsoft.EntityFrameworkCore 8.0.3
@@ -17,6 +12,11 @@ nuget Microsoft.Extensions.Http.Polly 8.0.3
 
 // VBR STUFF
 nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 7.1.0
+
+nuget Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency 9.0.1
+nuget Be.Vlaanderen.Basisregisters.GrAr.Provenance 21.0.0
+nuget Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple 5.0.1
+nuget Be.Vlaanderen.Basisregisters.TicketingService.Abstractions 2.0.0
 
 // BUILD STUFF
 nuget SourceLink.Embed.AllSourceFiles 2.8.3 copy_local: true
