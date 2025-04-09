@@ -12,8 +12,4 @@ public sealed class AggregateIdIsNotFoundException : Exception
     public AggregateIdIsNotFoundException(string? message)
         : base(message)
     { }
-
-    private AggregateIdIsNotFoundException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    { }
 }

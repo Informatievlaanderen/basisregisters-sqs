@@ -9,6 +9,6 @@ public class SqsRequest : IRequest<LocationResult>
 {
     public Guid TicketId { get; set; }
     public string? IfMatchHeaderValue { get; set; }
-    public ProvenanceData ProvenanceData { get; set; }
-    public IDictionary<string, object?> Metadata { get; set; }
+    public required ProvenanceData ProvenanceData { get; set; }
+    public IDictionary<string, object?> Metadata { get; set; } = new Dictionary<string, object?>();
 }

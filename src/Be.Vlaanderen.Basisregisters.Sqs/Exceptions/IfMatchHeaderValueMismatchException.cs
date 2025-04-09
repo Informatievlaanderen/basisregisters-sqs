@@ -12,8 +12,4 @@ public sealed class IfMatchHeaderValueMismatchException : Exception
     public IfMatchHeaderValueMismatchException(string? message)
         : base(message)
     { }
-
-    private IfMatchHeaderValueMismatchException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    { }
 }

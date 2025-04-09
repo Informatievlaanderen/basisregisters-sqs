@@ -1,7 +1,0 @@
-Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency
-
-FluentValidation
-MediatR
-
-Microsoft.EntityFrameworkCore.Relational
-Microsoft.Extensions.Http.Polly
