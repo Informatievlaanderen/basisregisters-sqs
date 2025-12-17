@@ -79,11 +79,18 @@ public abstract class SqsLambdaHandlerBase<TSqsLambdaRequest> : IRequestHandler<
         }
         catch (Exception exception)
         {
-            var ticketError = TryConvertToTicketError(exception, request);
-            await Ticketing.Error(
-                request.TicketId,
-                ticketError,
-                cancellationToken);
+            if ((_ticketingBehavior & TicketingBehavior.Error) != 0)
+            {
+                var ticketError = TryConvertToTicketError(exception, request);
+                await Ticketing.Error(
+                    request.TicketId,
+                    ticketError,
+                    cancellationToken);
+            }
+            else
+            {
+                throw;
+            }
         }
     }
 
