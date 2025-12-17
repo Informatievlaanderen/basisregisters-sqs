@@ -8,6 +8,7 @@ public enum TicketingBehavior
     None = 0,
     Pending = 1,
     Complete = 2,
+    Error = 4,
 
-    All = Pending | Complete
+    All = Pending | Complete | Error
 }
