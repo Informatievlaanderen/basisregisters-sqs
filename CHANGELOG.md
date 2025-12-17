@@ -1,3 +1,11 @@
+## [4.2.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v4.2.0...v4.2.1) (2025-12-17)
+
+
+### Bug Fixes
+
+* add Error to TicketingBehavior ([fc430e7](https://github.com/informatievlaanderen/basisregisters-sqs/commit/fc430e7229548b399ad59f4d62a23276c502695f))
+* add Error to TicketingBehavior ([773a931](https://github.com/informatievlaanderen/basisregisters-sqs/commit/773a93176d85b1963facb2bcf086d0069ea2e561))
+
 # [4.2.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v4.1.1...v4.2.0) (2025-12-17)
 
 
