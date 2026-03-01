@@ -139,14 +139,14 @@ jobs:
         pip install requests markdown argparse
 
     - name: Download Sqs NuGet
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       continue-on-error: false
       with:
         name: nuget-Be.Vlaanderen.Basisregisters.Sqs-${{ needs.set-release-version.outputs.version }}
         path: dist/nuget/
 
     - name: Download Sqs.Lambda NuGet
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       continue-on-error: false
       with:
         name: nuget-Be.Vlaanderen.Basisregisters.Sqs.Lambda-${{ needs.set-release-version.outputs.version }}
@@ -195,13 +195,13 @@ jobs:
       run: dotnet --info
 
     - name: Download NuGet Sqs package
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: nuget-Be.Vlaanderen.Basisregisters.Sqs-${{ needs.release.outputs.version }}
         path: ~/
 
     - name: Download NuGet Sqs.Lambda package
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: nuget-Be.Vlaanderen.Basisregisters.Sqs.Lambda-${{ needs.release.outputs.version }}
         path: ~/
