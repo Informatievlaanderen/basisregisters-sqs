@@ -20,11 +20,11 @@
       },
       "Be.Vlaanderen.Basisregisters.TicketingService.Abstractions": {
         "type": "Direct",
-        "requested": "[3.0.0, )",
-        "resolved": "3.0.0",
-        "contentHash": "c5WHaHXwXnJeZ9AvnBxJA1EMGjnVgFz3qnJF5KZ9hZt3m9yKKmDDX59iD7C/DgzjL1quUMy1F2GEGXJjZxjRZg==",
+        "requested": "[3.3.2, )",
+        "resolved": "3.3.2",
+        "contentHash": "cPenhtOmzhWtVxIjxEWNoWhXk+iRr53V4JS23EtXJZrB8y45yFRcQ6W3L31Ci8ygIVURrIDi/P++OtemX228nw==",
         "dependencies": {
-          "System.Text.Json": "9.0.3"
+          "System.Text.Json": "9.0.5"
         }
       },
       "FluentValidation": {
@@ -631,8 +631,8 @@
       },
       "System.Text.Json": {
         "type": "Transitive",
-        "resolved": "9.0.3",
-        "contentHash": "r2JRkLjsYrq5Dpo7+y3Wa73OfirZPdVhxiTJWwZ+oJM7FOAe0LkM3GlH+pgkNRdd1G1kwUbmRCdmh4uoaWwu1g=="
+        "resolved": "9.0.5",
+        "contentHash": "rnP61ZfloTgPQPe7ecr36loNiGX3g1PocxlKHdY/FUpDSsExKkTxpMAlB4X35wNEPr1X7mkYZuQvW3Lhxmu7KA=="
       },
       "System.Threading.Tasks.Extensions": {
         "type": "Transitive",
@@ -644,7 +644,7 @@
         "dependencies": {
           "Be.Vlaanderen.Basisregisters.GrAr.Provenance": "[22.0.0, )",
           "Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple": "[6.0.0, )",
-          "Be.Vlaanderen.Basisregisters.TicketingService.Abstractions": "[3.0.0, )",
+          "Be.Vlaanderen.Basisregisters.TicketingService.Abstractions": "[3.3.2, )",
           "MediatR": "[12.5.0, )"
         }
       },

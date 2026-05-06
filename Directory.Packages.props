@@ -13,7 +13,7 @@
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency" Version="10.0.2" />
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.GrAr.Provenance" Version="22.0.0" />
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple" Version="6.0.0" />
-    <PackageVersion Include="Be.Vlaanderen.Basisregisters.TicketingService.Abstractions" Version="3.0.0" />
+    <PackageVersion Include="Be.Vlaanderen.Basisregisters.TicketingService.Abstractions" Version="3.3.2" />
     <PackageVersion Include="SourceLink.Embed.AllSourceFiles" Version="2.8.3" />
     <PackageVersion Include="SourceLink.Copy.PdbFiles" Version="2.8.3" />
     <PackageVersion Include="xunit" Version="2.9.3" />
