@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v5.0.0...v5.1.0) (2026-06-04)
+
+
+### Features
+
+* update grar common package ([7d7e291](https://github.com/informatievlaanderen/basisregisters-sqs/commit/7d7e29120553f1c8e676980fa456a09a6c360e97))
+
 # [5.0.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v4.2.1...v5.0.0) (2026-06-04)
 
 
