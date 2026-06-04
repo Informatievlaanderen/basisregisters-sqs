@@ -1,6 +1,6 @@
 {
   "name": "basisregisters-sqs",
-  "version": "4.2.1",
+  "version": "5.0.0",
   "description": "AWS SQS Helpers.",
   "author": "Basisregisters Vlaanderen",
   "license": "MIT",

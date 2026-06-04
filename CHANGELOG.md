@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v4.2.1...v5.0.0) (2026-06-04)
+
+
+### Features
+
+* update packages + upgrade to dotnet 10 ([8b64a50](https://github.com/informatievlaanderen/basisregisters-sqs/commit/8b64a50cd9550e97d3cf811a43ccdcde2048988b))
+
+
+### BREAKING CHANGES
+
+* update to dotnet 10
+
 ## [4.2.1](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v4.2.0...v4.2.1) (2025-12-17)
 
 
