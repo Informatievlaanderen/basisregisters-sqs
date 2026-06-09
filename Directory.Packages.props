@@ -12,7 +12,7 @@
     <PackageVersion Include="Polly" Version="8.6.6" />
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.CommandHandling.Idempotency" Version="11.0.0" />
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.GrAr.Provenance" Version="24.1.0" />
-    <PackageVersion Include="Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple" Version="7.0.0" />
+    <PackageVersion Include="Be.Vlaanderen.Basisregisters.MessageHandling.AwsSqs.Simple" Version="7.1.0" />
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.TicketingService.Abstractions" Version="4.0.0" />
     <PackageVersion Include="SourceLink.Embed.AllSourceFiles" Version="2.8.3" />
     <PackageVersion Include="SourceLink.Copy.PdbFiles" Version="2.8.3" />
