@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v5.2.0...v5.3.0) (2026-06-09)
+
+
+### Features
+
+* update packages ([6d85414](https://github.com/informatievlaanderen/basisregisters-sqs/commit/6d85414d5ac0ad03ca2a20a81720d318c311f8f6))
+
 # [5.1.0](https://github.com/informatievlaanderen/basisregisters-sqs/compare/v5.0.0...v5.1.0) (2026-06-04)
 
 
